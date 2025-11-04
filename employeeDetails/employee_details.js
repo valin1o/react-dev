@@ -13,11 +13,6 @@ function displayEmployees() {
     document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
 
-function calculateTotalSalaries() {
-    const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
-    alert(`Total Salaries: $${totalSalaries}`);
-  }
-
   function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
      const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
